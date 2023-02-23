@@ -5,7 +5,7 @@ function trollname
     or return
 
     if set -q _flag_help
-        echo "Usage: trollname [-h|--help] [-n|--number] [-f|--firstmatch] [-f|--fastmatch] [-s|--stdin] SOURCES..."
+        echo "Usage: trollname [-h|--help] [-n|--number] [-f|--firstmatch] [-l|--lastmatch] [-s|--stdin] SOURCES..."
         echo "  -h, --help        prints this help information"
         echo "  -n, --number      number of full names to generate (default: 1)"
         echo "  -f, --firstmatch  regex to match for first names, grep basic, case insensitive"
@@ -38,7 +38,7 @@ function trollname
         if set -q $TROLLNAMES_PATH
             set -f source_path $TROLLNAMES_PATH
         else
-            set -f source_path "/home/mbk/hs/ideas/ft/6-letter-english-words.txt"
+            set -f source_path "/home/mbk/hs/content/mine/trollname/6-letter-english-words.txt"
         end
     end
 
